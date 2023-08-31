@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = "UNBL Online Documentation"
-copyright = "2023, UNDP and UNEP-WCMC"
+copyright = "2023, UNDP & UNEP-WCMC"
 author = "UNDP and UNEP-WCMC"
 
 
