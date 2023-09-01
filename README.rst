@@ -9,3 +9,5 @@ Target Audience
 
 Getting Started
 ^^^^^^^^^^^^^^^
+
+For guidance on RST formatting, see: https://bashtage.github.io/sphinx-material/rst-cheatsheet/rst-cheatsheet.html
