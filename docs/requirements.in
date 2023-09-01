@@ -1,4 +1,4 @@
 sphinx
-#sphinx_rtd_theme
-renku_sphinx_theme
+sphinx_rtd_theme
+#renku_sphinx_theme
 readthedocs-sphinx-search
