@@ -1,11 +1,11 @@
 .. include:: ../README.rst
 
-Welcome to the UNBL Online Documentation!
-=========================================
-
-**UNBL's Documentation** is a work in progress
-
 Check out the :doc:`introduction` section for further information
+
+.. note:: 
+
+   **UNBL's Documentation** is a work in progress
+
 
 .. note::
 
