@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, UNDP & UNEP-WCMC
+# This file is distributed under the same license as the UNBL Online
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: UNBL Online Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-06 09:55+1000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: fr_FR\n"
+"Language-Team: fr_FR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../usage.rst:2
+msgid "Usage"
+msgstr ""
+
+#: ../../usage.rst:4
+msgid "Basic Usage"
+msgstr ""
+
+#: ../../usage.rst:5
+msgid ""
+"Example 1 Example 2 Advanced Features ------------------ Feature 1 "
+"Feature 2 Common Use Cases"
+msgstr ""
+

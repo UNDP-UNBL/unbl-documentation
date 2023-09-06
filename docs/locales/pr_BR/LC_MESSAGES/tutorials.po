@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, UNDP & UNEP-WCMC
+# This file is distributed under the same license as the UNBL Online
+# Documentation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: UNBL Online Documentation \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-06 09:55+1000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: pr_BR\n"
+"Language-Team: pr_BR <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../tutorials.rst:2
+msgid "Tutorials"
+msgstr ""
+
+#: ../../tutorials.rst:4
+msgid "Tutorial 1: [Topic]"
+msgstr ""
+
+#: ../../tutorials.rst:5 ../../tutorials.rst:11
+msgid "Step 1 Step 2 ..."
+msgstr ""
+
+#: ../../tutorials.rst:10
+msgid "Tutorial 2: [Topic]"
+msgstr ""
+
