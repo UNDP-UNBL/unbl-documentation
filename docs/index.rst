@@ -1,4 +1,4 @@
-.. include:: ../README.rst
+.. include:: ../README.md
 
 Check out the :doc:`introduction` section for further information
 
