@@ -11,11 +11,9 @@ UN Biodiversity Lab Online Documentation
 .. |Documentation Status| image:: https://readthedocs.org/projects/unbl-documentation/badge/?version=latest
     :target: https://unbl-documentation.readthedocs.io/en/latest/
 
-About the Documentation
-------------------------
+About the UN Biodiversity Lab - Private Workspace Guidance and Documentation
 
-Target Audience
-^^^^^^^^^^^^^^^
+This guide explains how to take advantage of features of your UNBL workspace on the UN Biodiversity Lab (UNBL) platform. If you have any further questions, please visit our `support page <https://www.unbiodiversitylab.org/support/>`_ or contact us at support@unbiodiversitylab.org.
 
 Getting Started
 ^^^^^^^^^^^^^^^
