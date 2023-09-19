@@ -1,7 +1,7 @@
 How do I view places within my UNBL workspace?
 ==============================================
 
-.. figure:: https://www.dropbox.com/s/9okhxsaf2wm372s/8_find_country.gif?dl=0
+.. figure:: https://www.dropbox.com/s/9okhxsaf2wm372s/8_find_country.gif?raw=1
   
 Once your preferred workspace(s) are selected, you can use the Places tab to search for and select a location, as well as to view its associated dynamic metrics. Only Places accessible to your selected workspaces will be available. 
 
