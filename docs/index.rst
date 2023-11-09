@@ -6,11 +6,6 @@ Check out the :doc:`introduction` section for further information
 
    **UNBL's Documentation** is a work in progress
 
-
-.. note::
-
-   This project is under active development.
-
 Contents
 --------
 
@@ -18,7 +13,10 @@ Contents
    :maxdepth: 1
 
    introduction
-   registration
+   how-do-I-register-or-login
+   how-do-I-manage-my-account
+   how-do-I-access-my-workspace
+   how-do-I-view-places-within-my-unbl-workspace
    configuration
    usage
    tutorials
@@ -28,7 +26,6 @@ Contents
    best_practices
    contributing
    changelog
-   license
    acknowledgments
    appendix
    glossary
