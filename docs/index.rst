@@ -13,10 +13,15 @@ Contents
    :maxdepth: 1
 
    introduction
-   how-do-I-register-or-login
-   how-do-I-manage-my-account
-   how-do-I-access-my-workspace
-   how-do-I-view-places-within-my-unbl-workspace
+   1_register
+   2_manage
+   3_navigate
+   4_language
+   5_adjust_mapview
+   6_manage_labels_and_basemaps
+   7_find_country
+   8_dynamic_metrics1
+   9_dynamic_metrics2
    configuration
    usage
    tutorials
