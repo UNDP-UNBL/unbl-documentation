@@ -13,9 +13,10 @@ Contents
    :maxdepth: 1
 
    introduction
+   how-do-I-register-or-login
+   how-do-I-manage-my-account
    how-do-I-access-my-workspace
    how-do-I-view-places-within-my-unbl-workspace
-   registration
    configuration
    usage
    tutorials
@@ -25,7 +26,6 @@ Contents
    best_practices
    contributing
    changelog
-   license
    acknowledgments
    appendix
    glossary
