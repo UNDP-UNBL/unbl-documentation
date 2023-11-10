@@ -1,7 +1,7 @@
 How do I find my country?
 =========================
 
-.. figure:: /images/7_find_country.gif
+.. figure:: /images/gifs/7_find_country.gif
    :align: center
 
 

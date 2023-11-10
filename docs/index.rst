@@ -22,13 +22,20 @@ Contents
    7_find_country
    8_dynamic_metrics1
    9_dynamic_metrics2
-   configuration
-   usage
-   tutorials
-   api_reference
+   10_find_layers
+   11_find_dpg_layers
+   12_find_layer_info
+   13_customize_mapview
+   14_time_series_data
+   15_share_data
+   16_clip_export
+   17_download_global_data
+   18_maps_for_reports
+   19_suggest_data
+   20_private_workspaces
    data_list
    troubleshooting
-   best_practices
+   tutorials
    contributing
    changelog
    acknowledgments

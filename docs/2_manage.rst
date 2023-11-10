@@ -1,7 +1,7 @@
 How do I manage my account?
 ===========================
 
-.. figure:: /images/2_manage_account.gif
+.. figure:: /images/gifs/2_manage_account.gif
    :align: center
   
 

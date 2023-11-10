@@ -1,7 +1,7 @@
 How do I add/remove place labels, roads, and satellite view from the base map?
 ==============================================================================
 
-.. figure:: /images/6_manage_labels_and_basemaps.gif
+.. figure:: /images/gifs/6_manage_labels_and_basemaps.gif
    :align: center
 
 

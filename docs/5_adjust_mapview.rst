@@ -1,9 +1,8 @@
 How do I adjust my map view?
 ============================
 
-.. figure:: /images/5_adjust_mapview.gif
+.. figure:: /images/gifs/5_adjust_mapview.gif
    :align: center
-  
 
 
 There are several features that can assist you to navigate the map screen. These include:

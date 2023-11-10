@@ -1,7 +1,7 @@
 How do I register or log-in?
 ============================
 
-.. figure:: /images/1_signup.gif
+.. figure:: /images/gifs/1_register.gif
    :align: center
   
 

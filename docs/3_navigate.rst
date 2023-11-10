@@ -1,7 +1,7 @@
 How do I navigate between the UN Biodiversity Lab website and data app?
 =======================================================================
 
-.. figure:: /images/3_navigate.gif
+.. figure:: /images/gifs/3_navigate.gif
    :align: center
 
 

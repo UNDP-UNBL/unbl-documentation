@@ -1,7 +1,7 @@
 What dynamic metrics are available for my country?
 ==================================================
 
-.. figure:: /images/8_dynamic_metrics1.gif
+.. figure:: /images/gifs/8_dynamic_metrics1.gif
    :align: center
 
 

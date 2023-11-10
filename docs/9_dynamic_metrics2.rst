@@ -1,12 +1,12 @@
 What dynamic metrics are available for my country?  (cont.)
 ===========================================================
 
-.. figure:: /images/9_dynamic_metrics2.gif
+.. figure:: /images/gifs/9_dynamic_metrics2.gif
    :align: center
 
 
-.. |info| image:: /images/info-icon.png
-.. |download| image:: /images/download-icon.png
+.. |info| image:: /images/icons/info-icon.png
+.. |download| image:: /images/icons/download-icon.png
 
 
 #. Click on the |info| icon to view layer info, the info pages provide a brief description of the data, related paper to read and source links.  

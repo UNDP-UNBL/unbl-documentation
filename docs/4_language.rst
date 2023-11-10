@@ -1,7 +1,7 @@
 How do I change the language?
 =============================
 
-.. figure:: /images/4_language.gif
+.. figure:: /images/gifs/4_language.gif
    :align: center
 
 
