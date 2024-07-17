@@ -15,6 +15,10 @@ About the UN Biodiversity Lab - Private Workspace Guidance and Documentation
 
 This guide explains how to take advantage of features of your UNBL workspace on the UN Biodiversity Lab (UNBL) platform. If you have any further questions, please visit our `support page <https://www.unbiodiversitylab.org/support/>`_ or contact us at support@unbiodiversitylab.org.
 
+readthedocs:
+^^^^^^^^^^^^
+https://unbl-documentation.readthedocs.io/en/latest/
+
 Getting Started
 ^^^^^^^^^^^^^^^
 
