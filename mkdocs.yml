@@ -412,7 +412,9 @@ extra_css:
   - assets/css/unbl-custom.css
 
 extra_javascript:
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  # NOTE: polyfill.io was removed — the domain was sold and began serving
+  # malicious code (supply-chain attack). MathJax 3 works without it in
+  # modern browsers. Do not re-add polyfill.io / cdn.polyfill.io.
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - wordpress-site/notify-parent.js
 
