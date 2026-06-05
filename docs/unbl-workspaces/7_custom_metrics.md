@@ -140,7 +140,7 @@ Once the custom metric has been configured, it is necessary to create a widget f
 	
 	f)ii) For metrics created using a categorical layer, an additional toggle option is available called *Use layer categories*. 
 	
-	The option is toggled on by default and specifies that the categorical widget chart should use the same layer categories as those configured in the associated raster layer on UNBL. Should users wish to use widget chart categories that are different from those specified in the associated raster layer, they should toggle the *Use layer categories* option off. This will prompt the user to specify an exhaustive list of categories that should be used in the chart, with each category requiring the following parameters to be filled in:
+	The option is toggled on by default and specifies that the categorical widget chart should use the same layer categories as those configured in the associated raster layer on UNBL. Should users wish to use widget chart categories that are different from those specified in the associated raster layer (e.g., to collate categories in the original layer into a simplified grouping of categories), they should toggle the *Use layer categories* option off. This will prompt the user to specify an exhaustive list of categories that should be used in the chart, with each category requiring the following parameters to be filled in:
 	
 	- *Label*: The name of the category
 	
