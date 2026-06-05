@@ -1406,6 +1406,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Добавление собственных пользовательских показателей в ваше рабочее пространство
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1422,6 +1440,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 1: Загрузите место
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-geotiff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 2: Загрузите растровый слой в формате GeoTIFF
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 3: Создайте метрику
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 4: Создайте виджет
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг 5: Создайте дашборд
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Просмотр дашбордов и виджетов
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2039,7 +2142,227 @@
 
 
 <h1 id="_1">Добавление собственных пользовательских показателей в ваше рабочее пространство<a class="headerlink" href="#_1" title="Anchor link to this section for reference">¶</a></h1>
-<p>Новая функция — скоро будет доступна!</p>
+<p><strong>Этот перевод выполнен с помощью искусственного интеллекта и может содержать ошибки.</strong></p>
+<p>Публичная платформа UNBL в настоящее время предлагает одиннадцать динамических метрик по умолчанию (см. <a href="../../unbl-public-platform/8_dynamic_metrics1/">«Какие динамические метрики доступны для моей страны?»</a>).</p>
+<p>Рабочие пространства UNBL позволяют пользователям настраивать собственные пользовательские метрики для выполнения вычислений «на лету» и отображения зональной статистики для интересующих пользователя территорий на основе загруженных ими геопространственных слоёв данных.</p>
+<p>Настройка пользовательской метрики в рабочем пространстве включает 5 шагов. Каждый шаг подробно описан в данном разделе.</p>
+<h2 id="1">Шаг 1: Загрузите место<a class="headerlink" href="#1" title="Anchor link to this section for reference">¶</a></h2>
+<p>Метрики отображаются на UNBL после выбора конкретного места, которое определяет область интереса, для которой рассчитывается зональная статистика. Поэтому необходимо загрузить в рабочее пространство место, для которого вы хотите просматривать пользовательскую метрику. Подробные инструкции по загрузке места в рабочее пространство см. в разделе <a href="../5_add_places/">«Как добавить места?»</a>.</p>
+<h2 id="2-geotiff">Шаг 2: Загрузите растровый слой в формате GeoTIFF<a class="headerlink" href="#2-geotiff" title="Anchor link to this section for reference">¶</a></h2>
+<p>Для создания пользовательской метрики необходимо загрузить растровый слой, для которого вы хотите просматривать зональную статистику. Рабочие пространства UNBL поддерживают вычисление метрик только с использованием слоёв, загруженных в рабочее пространство через опцию «Загрузка файла GeoTIFF». Подробные инструкции по загрузке слоя с помощью этой опции см. в разделе <a href="../6_add_data/#how-do-i-upload-raster-layers-in-geotiff-format">«Как загружать растровые слои в формате GeoTIFF?»</a>.</p>
+<p>Для корректной работы пользовательской метрики на UNBL необходимо учитывать следующие технические предварительные условия для загружаемых слоёв GeoTIFF:</p>
+<ul>
+<li>
+<p>GeoTIFF может представлять любой вид непрерывных или категориальных данных, однако значения пикселей должны быть целочисленного или вещественного типа;</p>
+</li>
+<li>
+<p>Для категориальных данных рекомендуется, чтобы GeoTIFF содержал не более 25 дискретных целочисленных классов; большее число классов снижает читаемость графиков метрик;</p>
+</li>
+<li>
+<p>Зональная статистика для пользовательской метрики может быть рассчитана только для слоёв GeoTIFF, охватывающих загруженное место. Если выбранное на карте UNBL место пространственно не перекрывается со слоем GeoTIFF, для которого настроена пользовательская метрика, метрика вернёт пустой график данных.</p>
+</li>
+<li>
+<p>Можно настроить метрику временного ряда, отображающую изменения во времени для нескольких слоёв GeoTIFF; в таких случаях все слои GeoTIFF должны иметь одинаковые атрибуты, например диапазоны минимальных/максимальных значений для непрерывных данных или определения категорий (т. е. конфигурацию легенды) для категориальных данных.</p>
+</li>
+</ul>
+<p>Пользователи, желающие настроить пользовательские метрики для векторных полигональных данных, должны сначала конвертировать их в растровый формат GeoTIFF с помощью методов растеризации. Примеры методов растеризации можно найти в онлайн-документации <a href="https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/gdal/vectorconversion.html#rasterize-vector-to-raster">QGIS</a>, <a href="https://pygis.io/docs/e_raster_rasterize.html">PyGIS</a> и <a href="https://rdrr.io/cran/terra/man/rasterize.html">rdrr.io</a>. Для минимизации ошибок в расчётах метрик, которые могут возникнуть при растеризации векторных данных, рекомендуется:</p>
+<ul>
+<li>
+<p>Если векторные данные содержат только текстовые названия атрибутов, перед растеризацией необходимо добавить новое целочисленное поле и присвоить уникальный номер каждому классу категориальных данных; это целочисленное поле следует использовать для назначения значений пикселей при растеризации;</p>
+</li>
+<li>
+<p>Преобразовать векторные данные в единую проецируемую систему координат, например WGS84 (EPSG: 4326), до растеризации;</p>
+</li>
+<li>
+<p>Перекрывающиеся полигоны следует разрешить с помощью приоритета записи пикселей при растеризации — например, подходов «последнее нарисованное» или «победа наибольшего значения»;</p>
+</li>
+<li>
+<p>Выбрать подходящее растровое разрешение с учётом компромисса между минимизацией краевых ошибок при преобразовании границ полигонов в пиксели и минимизацией размера файла (слои, загружаемые в рабочее пространство UNBL через опцию «Загрузка файла GeoTIFF», не могут превышать 1000 МБ).</p>
+</li>
+</ul>
+<h2 id="3">Шаг 3: Создайте метрику<a class="headerlink" href="#3" title="Anchor link to this section for reference">¶</a></h2>
+<p>Создание метрики предполагает выбор слоёв GeoTIFF в рабочем пространстве, которые будут использоваться для расчёта зональной статистики. Для создания метрики:</p>
+<ol>
+<li>
+<p>Нажмите кнопку «Home» на странице администратора вашего рабочего пространства, чтобы развернуть выпадающее меню. Выберите «Metrics».</p>
+</li>
+<li>
+<p>Нажмите появившуюся кнопку «CREATE NEW METRIC».</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image1-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image1-metrics.png"></a></p>
+</li>
+<li>
+<p>На странице новой метрики заполните следующую информацию:</p>
+<p>a) <em>Title</em>: Название метрики. Оно должно описывать содержимое набора данных, для которого настраивается метрика. Оно может совпадать с названием загруженного слоя GeoTIFF.</p>
+<p>b) <em>Metric slug</em>: Слаг — это уникальный идентификатор метрики в рабочем пространстве. В рабочем пространстве не может быть нескольких метрик с одинаковым слагом. Он должен содержать только буквы, цифры и дефисы («-»). Для генерации уникального идентификатора на основе указанного названия метрики можно использовать кнопку «GENERATE SLUG NAME».</p>
+<p>c) <em>Metric data source(s)</em>: Выберите из выпадающего списка слой GeoTIFF, загруженный в ваше рабочее пространство. Для пользовательских метрик, отображающих изменения во времени, есть возможность выбрать несколько слоёв GeoTIFF с помощью кнопки «ADD ADDITIONAL DATA SOURCE». Используйте эту опцию только при наличии ряда слоёв GeoTIFF с единой схемой атрибутов, например диапазонами минимальных/максимальных значений для непрерывных данных или определениями категорий (т. е. конфигурацией легенды) для категориальных данных.</p>
+<p>d) <em>Histogram bins</em>: Это обязательное поле появляется при выборе слоя GeoTIFF с категорией непрерывных данных. Метрика будет использовать гистограмму для расчёта зональной статистики по слоям непрерывных данных. Поэтому необходимо указать количество интервалов (бинов) вычисляемой гистограммы. Бины — это интервалы, которые делят диапазон числовых данных в слое GeoTIFF на группы равной ширины. Выберите число, обеспечивающее достаточное количество интервалов для диапазона и разброса ваших данных. В большинстве случаев оптимально от 5 до 20 бинов, однако это зависит от конкретного диапазона данных.</p>
+<p>e) <em>Calculate for place types (optional)</em>: При необходимости можно выбрать тип места, для которого пользовательская метрика должна отображать статистику. Это полезно, например, для метрики прибрежной эвтрофикации, охватывающей только места морской категории. Однако если слой данных для метрики не предназначен для конкретной территории, это поле следует оставить пустым.</p>
+<p>f)  После указания всех параметров кнопка «SAVE AND VIEW DETAILS» выделится синим цветом при условии, что все введённые данные корректны. Нажмите эту кнопку, чтобы настроить метрику в рабочем пространстве.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image2-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image2-metrics.png"></a></p>
+</li>
+<li>
+<p>На появившейся странице редактирования метрики включите переключатель «Published», чтобы опубликовать метрику.</p>
+</li>
+</ol>
+<h2 id="4">Шаг 4: Создайте виджет<a class="headerlink" href="#4" title="Anchor link to this section for reference">¶</a></h2>
+<p>После настройки пользовательской метрики необходимо создать виджет для неё. Виджет определяет, как данные метрики будут визуализироваться и какую информацию они будут показывать в представлении карты UNBL. Для создания виджета:</p>
+<ol>
+<li>
+<p>Нажмите кнопку «Home» на странице администратора вашего рабочего пространства, чтобы развернуть выпадающее меню. Выберите «Widgets».</p>
+</li>
+<li>
+<p>Нажмите появившуюся кнопку «CREATE NEW WIDGET».</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image3-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image3-metrics.png"></a></p>
+</li>
+<li>
+<p>На странице нового виджета заполните следующую информацию:</p>
+<p>a) <em>Title</em>: В идеале название виджета должно совпадать с названием метрики, настроенной на шаге 3. Это чётко связывает виджет с его метрикой.</p>
+<p>b) <em>Widget slug</em>: Слаг — это уникальный идентификатор виджета в рабочем пространстве. Он должен содержать только буквы, цифры и дефисы («-»). Для генерации уникального идентификатора на основе указанного названия метрики можно использовать кнопку «GENERATE SLUG NAME». В идеале слаг виджета должен совпадать со слагом метрики из шага 3.</p>
+<p>c) <em>Description (optional)</em>: Создайте краткое описание виджета. Это должно быть общее описание данных, которые метрика отображает на UNBL. Поле необязательное.</p>
+<p>d) <em>Metric</em>: Выберите метрику, созданную на шаге 3, для связи с виджетом.</p>
+<p>e) <em>Widget Layer(s)</em>: В этом поле указывается слой данных, который можно визуализировать на карте UNBL вместе с метрикой. Оно автоматически заполняется слоем GeoTIFF, связанным с выбранной метрикой. При необходимости можно добавить дополнительные слои из выпадающего меню. Однако это не рекомендуется, если только в рабочем пространстве нет дополнительных слоёв, не используемых для расчёта метрики, но полезных для добавления контекстной геопространственной информации.</p>
+<p>f) <em>Widget Chart</em>: Определяет тип диаграммы для визуализации статистики метрики для вашего места. В таблице ниже представлен обзор доступных типов диаграмм в зависимости от типа виджета, который автоматически определяется на основе а) типа данных слоя GeoTIFF — категориальные (дискретные классы) или непрерывные (диапазон числовых значений), и б) количества слоёв в метрике — один слой или несколько (метрика временного ряда).</p>
+<p></p><div style="display: flex; justify-content: center;">
+<table style="border-collapse: collapse;">
+<thead>
+  <tr>
+    <th style="min-width: 200px; border: 1px solid #ccc;"></th>
+    <th style="text-align: center; font-size: 1.0rem; white-space: nowrap; border: 1px solid #ccc;"><strong>Непрерывные данные</strong></th>
+    <th style="text-align: center; font-size: 1.0rem; white-space: nowrap; border: 1px solid #ccc;"><strong>Категориальные данные</strong></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td style="font-size: 1.0rem; border: 1px solid #ccc;"><strong>Один слой</strong></td>
+    <td style="text-align: center; border: 1px solid #ccc;">Гистограмма<br><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image4-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image4-metrics.png" style="display:inline-block" width="350"></a></td>
+    <td style="text-align: center; border: 1px solid #ccc;">Круговая диаграмма<br><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image5-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image5-metrics.png" style="display:inline-block" width="250"></a><br>Столбчатая диаграмма<br><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image6-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image6-metrics.png" style="display:inline-block" width="250"></a></td>
+  </tr>
+  <tr>
+    <td style="font-size: 1.0rem; border: 1px solid #ccc;"><strong>Временной ряд</strong></td>
+    <td style="text-align: center; border: 1px solid #ccc;">Линейный график<br><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image7-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image7-metrics.png" style="display:inline-block" width="250"></a><br>Диаграмма с областями<br><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image8-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image8-metrics.png" style="display:inline-block" width="250"></a></td>
+    <td style="text-align: center; border: 1px solid #ccc;">Диаграмма с областями<br><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image9-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image9-metrics.png" style="display:inline-block" width="350"></a></td>
+  </tr>
+</tbody>
+</table>
+</div><p></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Тип диаграммы виджета</th>
+<th style="text-align: center;">Отображение данных</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Гистограмма</td>
+<td style="text-align: center;">Разделяет числовой диапазон данных на интервалы равной ширины (бины). Количество отображаемых бинов соответствует числу бинов, настроенных на странице метрики в серверной части. Ось X отображает измеряемую переменную, ось Y — измеренную площадь в км<sup>2</sup> области интереса.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Диаграмма с областями</td>
+<td style="text-align: center;">Для непрерывных данных также разделяет числовой диапазон на бины, соответствующие числу бинов, настроенных на странице метрики. Для категориальных данных используются отдельные классы. Ось X отображает время, ось Y — процент от общей площади области интереса.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Круговая диаграмма</td>
+<td style="text-align: center;">Отображает пропорциональный охват каждого категориального класса в области интереса в виде секторов, в сумме составляющих 100%.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Столбчатая диаграмма</td>
+<td style="text-align: center;">Отображает каждый категориальный класс в виде столбца; ось X показывает измеряемые данные, ось Y — измеренную площадь в км<sup>2</sup> области интереса.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Линейный график</td>
+<td style="text-align: center;">Отображает изменение среднего значения между различными непрерывными наборами данных в метрике временного ряда. Ось X отображает время, ось Y — измеренное среднее значение каждого набора данных.</td>
+</tr>
+</tbody>
+</table>
+<p>f)i)    <em>Widget summary (optional)</em>: Создаёт сводку ключевых статистических показателей метрики, которая будет отображаться виджетом. Список доступных полей сводки предоставляет параметры, которые можно использовать в тексте сводки. Пример сводки виджета для метрики временного ряда с тремя слоями, показывающими Индекс антропогенной трансформации за три периода, показан ниже.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image10-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image10-metrics.png"></a></p>
+<p>Когда эта метрика и связанный с ней виджет активны на UNBL, поля сводки в тексте автоматически заполняются необходимыми параметрами, как показано ниже.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image11-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image11-metrics.png" style="width:550px !important"></a></p>
+<p>В качестве альтернативы, сводка виджета для метрики с одним слоем Индекса антропогенной трансформации будет использовать следующие поля:</p>
+<ul>
+<li>{location}: название текущего места</li>
+<li>{areaKm2}: картируемая площадь в квадратных километрах</li>
+<li>{mean}: среднее значение в виде числа</li>
+</ul>
+<p>Сводка виджета будет выглядеть примерно так:</p>
+<div class="language-text highlight"><pre><span></span><code>"In {location}, {areaKm2} square kilometers had a mean HMI score of {mean} in 2022."
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image12-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image12-metrics.png" style="width:550px !important"></a></p>
+<p>f)ii) Для метрик, созданных с использованием категориального слоя, доступна дополнительная опция переключателя <em>Use layer categories</em>.</p>
+<p>По умолчанию опция включена и указывает, что категориальный график виджета должен использовать те же категории слоя, что и настроенные для связанного растрового слоя на UNBL. Если пользователи хотят использовать категории графика виджета, отличные от указанных в связанном растровом слое, им следует отключить опцию <em>Use layer categories</em>. После этого пользователю будет предложено указать исчерпывающий список категорий для графика, причём для каждой категории необходимо заполнить следующие параметры:</p>
+<ul>
+<li>
+<p><em>Label</em>: Название категории</p>
+</li>
+<li>
+<p><em>Colour</em>: Палитра цветов для выбора цвета отображения соответствующей категории на графике виджета</p>
+</li>
+<li>
+<p><em>Values</em>: Уникальное(ые) число(а) в исходном слое данных, обозначающее(ие) настроенную категорию. Пользователь может указать несколько чисел для одной категории.</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image12_5-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image12_5-metrics.png"></a></p>
+<p>g)  <em>X-Axis Label (optional)</em>: Для типов метрик с гистограммой, линейным графиком или диаграммой с областями можно указать подпись оси X. Подпись должна соответствовать отображаемой переменной данных. Поле необязательное.</p>
+<p>h)  <em>X-Axis Unit (optional)</em>: Для типов метрик с гистограммой, линейным графиком или диаграммой с областями можно указать единицы измерения переменной данных. Поле необязательное.</p>
+<p>i)  После указания всех параметров кнопка «SAVE AND VIEW DETAILS» выделится синим цветом при условии, что все введённые данные корректны. Нажмите эту кнопку, чтобы создать виджет.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image13-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image13-metrics.png"></a></p>
+</li>
+<li>
+<p>На появившейся странице редактирования виджета включите переключатель «Published», чтобы опубликовать виджет.</p>
+</li>
+</ol>
+<h2 id="5">Шаг 5: Создайте дашборд<a class="headerlink" href="#5" title="Anchor link to this section for reference">¶</a></h2>
+<p>Дашборд служит пользовательским интерфейсом, который отображает метрику и связанный виджет в представлении карты UNBL при выборе места для просмотра метрик. Важно учитывать, что пользователи могут создавать любое количество метрик и виджетов, но все они могут быть размещены в одном дашборде. Поэтому достаточно создать один дашборд для всех метрик. Если в вашем рабочем пространстве ещё нет дашборда, выполните следующие шаги для его создания:</p>
+<ol>
+<li>
+<p>Нажмите кнопку «Home» на странице администратора вашего рабочего пространства, чтобы развернуть выпадающее меню. Выберите «Dashboards».</p>
+</li>
+<li>
+<p>Нажмите появившуюся кнопку «CREATE NEW DASHBOARD».</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image14-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image14-metrics.png"></a></p>
+</li>
+<li>
+<p>На странице нового дашборда заполните следующую информацию:</p>
+<p>a)  <em>Title</em>: Дашборд должен иметь название, чётко определяющее тематическую группу пользовательских метрик, связанных с ним. Например, дашборд может содержать все пользовательские метрики, определённые конкретным пользователем, и называться «Custom metrics by <em>user x</em>». Или дашборд может содержать метрики для конкретного места, например «Custom metrics for <em>country x</em>».</p>
+<p>b)  <em>Dashboard slug</em>: Слаг — это уникальный идентификатор дашборда в рабочем пространстве. В рабочем пространстве не может быть нескольких дашбордов с одинаковым слагом. Он должен содержать только буквы, цифры и дефисы («-»). Для генерации уникального идентификатора на основе указанного названия дашборда можно использовать кнопку «GENERATE SLUG NAME».</p>
+<p>c)  <em>Dashboard description</em>: Здесь можно дать краткое описание группы метрик. Например, «This dashboard contains custom metrics defined by <em>user x</em>.» Поле необязательное.</p>
+<p>d)  <em>Included Widgets</em>: Выберите виджет(ы) для включения в дашборд.</p>
+<p>e)  После указания всех параметров кнопка «SAVE AND VIEW DETAILS» выделится синим цветом при условии, что все введённые данные корректны. Нажмите эту кнопку, чтобы создать дашборд.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image15-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image15-metrics.png"></a></p>
+</li>
+<li>
+<p>На появившейся странице редактирования дашборда включите переключатель «Published», чтобы опубликовать дашборд.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Если у вас уже есть дашборд и вы хотите добавить в него новые виджеты, отредактируйте существующий дашборд и добавьте виджеты, нажав на значок карандаша рядом с записью дашборда в списке, который появляется на странице администратора после выбора «Dashboards» в выпадающем меню.</p>
+</div>
+<h2 id="_2">Просмотр дашбордов и виджетов<a class="headerlink" href="#_2" title="Anchor link to this section for reference">¶</a></h2>
+<p>Для просмотра пользовательских метрик:</p>
+<ol>
+<li>
+<p>В представлении карты UNBL убедитесь, что ваше рабочее пространство включено.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image16-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image16-metrics.png" style="width:600px !important"></a></p>
+</li>
+<li>
+<p>Выберите место для просмотра пользовательских метрик на вкладке «PLACES».</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image17-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image17-metrics.png" style="width:400px !important"></a></p>
+</li>
+<li>
+<p>Если наряду с вашим рабочим пространством активированы публичная платформа UNBL и/или другие рабочие пространства, возможно, потребуется выбрать дашборд с вашими пользовательскими метриками. В этом случае появится выпадающее меню со списком дашбордов и связанных рабочих пространств. Выберите свой дашборд из выпадающего меню.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Если пользовательские метрики в вашем дашборде не перекрываются с активированным местом, ваш дашборд не появится в выпадающем меню.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image18-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image18-metrics.png" style="width:400px !important"></a></p>
+</li>
+<li>
+<p>Теперь вы можете просматривать пользовательские метрики, настроенные для выбранного слоя GeoTIFF и места. Все функциональные возможности динамических метрик UNBL по умолчанию доступны и для пользовательских метрик, включая переключение связанного слоя, просмотр информации и загрузку данных метрики в форматах .csv, .tsv и .json.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image19-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image19-metrics.png"></a></p>
+</li>
+</ol>
 
 
 

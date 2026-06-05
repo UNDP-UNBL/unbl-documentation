@@ -1406,6 +1406,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ajouter vos propres métriques personnalisées à votre espace de travail
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1422,6 +1440,91 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#etape-1-telecharger-un-lieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 1 : Télécharger un lieu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-2-telecharger-une-couche-raster-au-format-geotiff" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 2 : Télécharger une couche raster au format GeoTIFF
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-3-creer-une-metrique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 3 : Créer une métrique
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-4-creer-un-widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 4 : Créer un widget
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-5-creer-un-tableau-de-bord" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Étape 5 : Créer un tableau de bord
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consultation-des-tableaux-de-bord-et-des-widgets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultation des tableaux de bord et des widgets
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2039,7 +2142,227 @@
 
 
 <h1 id="ajouter-vos-propres-metriques-personnalisees-a-votre-espace-de-travail">Ajouter vos propres métriques personnalisées à votre espace de travail<a class="headerlink" href="#ajouter-vos-propres-metriques-personnalisees-a-votre-espace-de-travail" title="Anchor link to this section for reference">¶</a></h1>
-<p>Nouvelle fonctionnalité - Bientôt disponible !</p>
+<p><strong>Il s'agit d'une traduction générée par une intelligence artificielle qui peut contenir des erreurs.</strong></p>
+<p>La plateforme publique UNBL propose actuellement onze métriques dynamiques par défaut (voir <a href="../../unbl-public-platform/8_dynamic_metrics1/">« Quelles métriques dynamiques sont disponibles pour mon pays ? »</a>).</p>
+<p>Les espaces de travail UNBL permettent aux utilisateurs de configurer leurs propres métriques personnalisées afin d'effectuer des calculs à la volée et d'afficher des statistiques zonales pour leurs zones d'intérêt, dérivées de leurs propres couches de données géospatiales téléchargées.</p>
+<p>La configuration d'une métrique personnalisée dans un espace de travail suit 5 étapes. Chaque étape est décrite dans cette section.</p>
+<h2 id="etape-1-telecharger-un-lieu">Étape 1 : Télécharger un lieu<a class="headerlink" href="#etape-1-telecharger-un-lieu" title="Anchor link to this section for reference">¶</a></h2>
+<p>Les métriques sont affichées sur UNBL après la sélection d'un lieu particulier qui définit la zone d'intérêt pour laquelle les statistiques zonales sont calculées. Il est donc nécessaire de télécharger un lieu dans votre espace de travail pour lequel vous souhaitez consulter la métrique personnalisée. Pour des étapes détaillées sur le téléchargement d'un lieu dans votre espace de travail, voir <a href="../5_add_places/">« Comment ajouter des lieux ? »</a>.</p>
+<h2 id="etape-2-telecharger-une-couche-raster-au-format-geotiff">Étape 2 : Télécharger une couche raster au format GeoTIFF<a class="headerlink" href="#etape-2-telecharger-une-couche-raster-au-format-geotiff" title="Anchor link to this section for reference">¶</a></h2>
+<p>Pour créer une métrique personnalisée, il est nécessaire de télécharger une couche raster pour laquelle vous souhaitez consulter des statistiques zonales. Les espaces de travail UNBL prennent uniquement en charge les calculs de métriques à partir de couches téléchargées via l'option « Téléchargement de fichier GeoTIFF ». Pour des étapes détaillées sur le téléchargement d'une couche à l'aide de cette option, voir <a href="../6_add_data/#how-do-i-upload-raster-layers-in-geotiff-format">« Comment télécharger des couches raster au format GeoTIFF ? »</a>.</p>
+<p>Pour qu'une métrique personnalisée fonctionne correctement sur UNBL, il est nécessaire de tenir compte des prérequis techniques suivants pour les couches GeoTIFF téléchargées :</p>
+<ul>
+<li>
+<p>Les GeoTIFF peuvent représenter tout type de données continues ou catégorielles, mais les valeurs de pixels doivent être de type entier ou flottant ;</p>
+</li>
+<li>
+<p>Il est recommandé que pour les données catégorielles, les GeoTIFF ne contiennent pas plus de 25 classes entières discrètes ; un nombre plus élevé de classes nuit à la lisibilité des graphiques de métriques ;</p>
+</li>
+<li>
+<p>Les statistiques zonales pour votre métrique personnalisée ne peuvent être calculées que pour les couches GeoTIFF dont la couverture de données recouvre le lieu téléchargé. Si le lieu sélectionné dans la vue cartographique UNBL ne chevauche pas spatialement la couche GeoTIFF configurée pour la métrique personnalisée, la métrique renverra un graphique de données vide.</p>
+</li>
+<li>
+<p>Il est possible de configurer une métrique de série temporelle qui montre les changements au fil du temps pour plusieurs couches GeoTIFF ; dans ces cas, toutes les couches GeoTIFF doivent avoir les mêmes valeurs d'attributs, telles que les plages de valeurs min/max pour les données continues, ou les définitions de catégories (c'est-à-dire la configuration de la légende) pour les données catégorielles.</p>
+</li>
+</ul>
+<p>Les utilisateurs souhaitant configurer des métriques personnalisées pour des données vectorielles de polygones doivent d'abord les convertir au format GeoTIFF raster à l'aide de techniques de rastérisation. Des exemples de techniques de rastérisation sont disponibles dans la documentation en ligne de <a href="https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/gdal/vectorconversion.html#rasterize-vector-to-raster">QGIS</a>, <a href="https://pygis.io/docs/e_raster_rasterize.html">PyGIS</a> et <a href="https://rdrr.io/cran/terra/man/rasterize.html">rdrr.io</a>. Pour minimiser les erreurs dans les calculs de métriques pouvant être introduites par le processus de rastérisation des données vectorielles, tenez compte des points suivants :</p>
+<ul>
+<li>
+<p>Si les données vectorielles ne contiennent que des noms d'attributs textuels, un nouveau champ entier doit être ajouté avant la rastérisation et un numéro unique doit être attribué à chaque classe pour les données catégorielles ; ce champ entier doit être utilisé pour attribuer des valeurs de pixels lors de la rastérisation ;</p>
+</li>
+<li>
+<p>Convertir les données vectorielles dans un système de référence de coordonnées projetées cohérent tel que WGS84 (EPSG : 4326) avant la rastérisation ;</p>
+</li>
+<li>
+<p>Les polygones superposés doivent être résolus par priorité de gravure de pixels lors de la rastérisation — par exemple, des approches « dernier tracé » ou « valeur la plus élevée gagne » ;</p>
+</li>
+<li>
+<p>Choisir une résolution raster appropriée qui tient compte des compromis entre la minimisation des erreurs de bordure lors de la conversion des limites de polygones en pixels et la minimisation de la taille du fichier (les couches téléchargées dans votre espace de travail UNBL via l'option « Téléchargement de fichier GeoTIFF » ne peuvent pas dépasser 1 000 Mo).</p>
+</li>
+</ul>
+<h2 id="etape-3-creer-une-metrique">Étape 3 : Créer une métrique<a class="headerlink" href="#etape-3-creer-une-metrique" title="Anchor link to this section for reference">¶</a></h2>
+<p>La création d'une métrique consiste à choisir les couches GeoTIFF de l'espace de travail qui doivent être utilisées pour calculer les statistiques zonales. Pour créer une métrique :</p>
+<ol>
+<li>
+<p>Cliquez sur le bouton « Home » dans la page d'administration de votre espace de travail pour développer le menu déroulant. Sélectionnez « Metrics ».</p>
+</li>
+<li>
+<p>Cliquez sur le bouton « CREATE NEW METRIC » qui apparaît.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image1-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image1-metrics.png"></a></p>
+</li>
+<li>
+<p>Dans la page de nouvelle métrique, renseignez les informations suivantes :</p>
+<p>a) <em>Title</em> : Le nom de votre métrique. Il doit décrire ce que montre le jeu de données pour lequel vous configurez la métrique. Il peut être identique à celui de la couche GeoTIFF téléchargée.</p>
+<p>b) <em>Metric slug</em> : Un slug est un identifiant unique pour la métrique dans votre espace de travail. Vous ne pouvez pas avoir plusieurs métriques avec le même slug dans votre espace de travail. Il ne doit contenir que des lettres, des chiffres et des tirets (« - »). Vous pouvez utiliser le bouton « GENERATE SLUG NAME » pour générer un identifiant unique basé sur le titre de métrique fourni.</p>
+<p>c) <em>Metric data source(s)</em> : Choisissez une couche GeoTIFF téléchargée dans votre espace de travail dans la liste déroulante. Pour les métriques personnalisées montrant l'évolution dans le temps, vous avez la possibilité de sélectionner plusieurs couches GeoTIFF à l'aide du bouton « ADD ADDITIONAL DATA SOURCE ». Sélectionnez cette option uniquement si vous disposez d'une série de couches GeoTIFF avec un schéma d'attributs cohérent, tel que des plages de valeurs min/max pour les données continues, ou des définitions de catégories (c'est-à-dire une configuration de légende) pour les données catégorielles.</p>
+<p>d) <em>Histogram bins</em> : Cette option apparaît comme un champ obligatoire si vous avez sélectionné une couche GeoTIFF avec une catégorie de données continues. La métrique utilisera un histogramme pour calculer les statistiques zonales des couches de données continues. Il est donc nécessaire de spécifier le nombre de classes que l'histogramme calculé pour la couche de données continues aura. Les classes sont également appelées intervalles. Elles divisent la plage de données numériques stockées dans la couche GeoTIFF en groupes de largeur égale. Choisissez un nombre qui crée un nombre adéquat d'intervalles de données pour la plage et la dispersion de vos données. Dans la plupart des cas, entre 5 et 20 classes est optimal, mais cela dépend de la plage de données spécifique.</p>
+<p>e) <em>Calculate for place types (optional)</em> : Vous pouvez éventuellement sélectionner le type de lieu pour lequel votre métrique personnalisée doit afficher des statistiques. Ceci est utile, par exemple, pour une métrique montrant l'eutrophisation côtière qui ne couvre que les lieux de la catégorie marine. Cependant, si la couche de données pour la métrique n'est pas conçue pour être limitée à une zone spécifique, ce champ doit rester vide.</p>
+<p>f)  Une fois tous les paramètres spécifiés, le bouton « SAVE AND VIEW DETAILS » s'affichera en bleu, à condition que toutes les informations saisies soient valides. Cliquez sur ce bouton pour configurer la métrique dans votre espace de travail.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image2-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image2-metrics.png"></a></p>
+</li>
+<li>
+<p>Dans la page de modification de métrique qui apparaît, activez le bouton « Published » pour publier la métrique.</p>
+</li>
+</ol>
+<h2 id="etape-4-creer-un-widget">Étape 4 : Créer un widget<a class="headerlink" href="#etape-4-creer-un-widget" title="Anchor link to this section for reference">¶</a></h2>
+<p>Une fois la métrique personnalisée configurée, il est nécessaire de créer un widget pour cette métrique. Le widget configure la manière dont les données de la métrique seront visualisées et les informations qu'elles afficheront dans la vue cartographique UNBL. Pour créer un widget :</p>
+<ol>
+<li>
+<p>Cliquez sur le bouton « Home » dans la page d'administration de votre espace de travail pour développer le menu déroulant. Sélectionnez « Widgets ».</p>
+</li>
+<li>
+<p>Cliquez sur le bouton « CREATE NEW WIDGET » qui apparaît.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image3-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image3-metrics.png"></a></p>
+</li>
+<li>
+<p>Dans la page de nouveau widget, renseignez les informations suivantes :</p>
+<p>a) <em>Title</em> : Idéalement, le nom du widget doit être identique à celui de la métrique configurée à l'étape 3. Cela associe clairement le widget à sa métrique.</p>
+<p>b) <em>Widget slug</em> : Un slug est un identifiant unique pour le widget dans votre espace de travail. Il ne doit contenir que des lettres, des chiffres et des tirets (« - »). Vous pouvez utiliser le bouton « GENERATE SLUG NAME » pour générer un identifiant unique basé sur le titre de métrique fourni. Idéalement, le slug du widget doit correspondre au slug de la métrique de l'étape 3.</p>
+<p>c) <em>Description (optional)</em> : Créez une courte description pour votre widget. Il doit s'agir d'une description générale des données que votre métrique affiche sur UNBL. Ce champ est optionnel.</p>
+<p>d) <em>Metric</em> : Choisissez la métrique créée à l'étape 3 à associer au widget.</p>
+<p>e) <em>Widget Layer(s)</em> : Ce champ spécifie la couche de données qui peut être visualisée dans la vue cartographique UNBL avec la métrique. Il est automatiquement rempli avec la couche GeoTIFF associée à la métrique choisie. Il est possible de choisir des couches supplémentaires dans le menu déroulant. Cependant, cela n'est pas recommandé, sauf si des couches supplémentaires existent dans l'espace de travail qui ne sont pas utilisées pour calculer la métrique mais sont utiles pour ajouter des informations géospatiales contextuelles.</p>
+<p>f) <em>Widget Chart</em> : Détermine le type de graphique qui sera utilisé pour visualiser les statistiques de la métrique pour votre lieu. Le tableau ci-dessous donne un aperçu des types de graphiques disponibles en fonction du type de widget, qui est automatiquement détecté selon a) si la couche GeoTIFF présente des données catégorielles (classes discrètes) ou continues (plage de valeurs numériques), et b) si une seule couche ou plusieurs couches (métrique de série temporelle) ont été choisies pour la métrique.</p>
+<p></p><div style="display: flex; justify-content: center;">
+<table style="border-collapse: collapse;">
+<thead>
+  <tr>
+    <th style="min-width: 200px; border: 1px solid #ccc;"></th>
+    <th style="text-align: center; font-size: 1.0rem; white-space: nowrap; border: 1px solid #ccc;"><strong>Données continues</strong></th>
+    <th style="text-align: center; font-size: 1.0rem; white-space: nowrap; border: 1px solid #ccc;"><strong>Données catégorielles</strong></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td style="font-size: 1.0rem; border: 1px solid #ccc;"><strong>Couche unique</strong></td>
+    <td style="text-align: center; border: 1px solid #ccc;">Histogramme<br><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image4-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image4-metrics.png" style="display:inline-block" width="350"></a></td>
+    <td style="text-align: center; border: 1px solid #ccc;">Diagramme circulaire<br><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image5-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image5-metrics.png" style="display:inline-block" width="250"></a><br>Diagramme en barres<br><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image6-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image6-metrics.png" style="display:inline-block" width="250"></a></td>
+  </tr>
+  <tr>
+    <td style="font-size: 1.0rem; border: 1px solid #ccc;"><strong>Série temporelle</strong></td>
+    <td style="text-align: center; border: 1px solid #ccc;">Graphique linéaire<br><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image7-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image7-metrics.png" style="display:inline-block" width="250"></a><br>Graphique en aires<br><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image8-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image8-metrics.png" style="display:inline-block" width="250"></a></td>
+    <td style="text-align: center; border: 1px solid #ccc;">Graphique en aires<br><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image9-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image9-metrics.png" style="display:inline-block" width="350"></a></td>
+  </tr>
+</tbody>
+</table>
+</div><p></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Type de graphique du widget</th>
+<th style="text-align: center;">Affichage des données</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Histogramme</td>
+<td style="text-align: center;">Sépare la plage numérique des données en intervalles de largeur égale, appelés classes. Le nombre de classes affichées correspond au nombre de classes configurées dans la page de métrique. L'axe X affiche la variable mesurée dans les données, et l'axe Y affiche la superficie mesurée en km<sup>2</sup> de la zone d'intérêt.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Graphique en aires</td>
+<td style="text-align: center;">Pour les données continues, sépare également la plage numérique en classes correspondant au nombre de classes configurées dans la page de métrique. Pour les données catégorielles, des classes distinctes sont utilisées. L'axe X affiche le temps, et l'axe Y affiche le pourcentage de la superficie totale de la zone d'intérêt.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Diagramme circulaire</td>
+<td style="text-align: center;">Mesure la couverture proportionnelle de chaque classe catégorielle dans la zone d'intérêt et affiche les classes en secteurs s'additionnant à 100 %.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Diagramme en barres</td>
+<td style="text-align: center;">Affiche chaque classe catégorielle sous forme de barre, l'axe X affichant les données mesurées et l'axe Y affichant la superficie mesurée en km<sup>2</sup> de la zone d'intérêt.</td>
+</tr>
+<tr>
+<td style="text-align: center;">Graphique linéaire</td>
+<td style="text-align: center;">Représente la variation de la moyenne entre différents jeux de données continues dans une métrique de série temporelle. L'axe X affiche le temps, et l'axe Y affiche la valeur moyenne mesurée de chaque jeu de données.</td>
+</tr>
+</tbody>
+</table>
+<p>f)i)    <em>Widget summary (optional)</em> : Crée un résumé des statistiques clés de la métrique qui sera affiché par le widget. La liste des champs de résumé disponibles fournit des paramètres pouvant être utilisés dans le texte du résumé. Un exemple de résumé de widget pour une métrique de série temporelle utilisant trois couches montrant l'Indice de modification humaine sur trois périodes est présenté ci-dessous.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image10-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image10-metrics.png"></a></p>
+<p>Lorsque cette métrique et son widget associé sont actifs sur UNBL, les champs de résumé dans le texte sont automatiquement remplis avec les paramètres nécessaires, comme illustré ci-dessous.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image11-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image11-metrics.png" style="width:550px !important"></a></p>
+<p>Par ailleurs, le résumé du widget pour une métrique à couche unique de l'Indice de modification humaine utiliserait les champs de résumé suivants :</p>
+<ul>
+<li>{location} : le nom du lieu actuel</li>
+<li>{areaKm2} : la superficie cartographiée en kilomètres carrés</li>
+<li>{mean} : la valeur moyenne en tant que nombre brut</li>
+</ul>
+<p>Le résumé du widget ressemblerait donc à quelque chose comme :</p>
+<div class="language-text highlight"><pre><span></span><code>"In {location}, {areaKm2} square kilometers had a mean HMI score of {mean} in 2022."
+</code></pre></div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image12-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image12-metrics.png" style="width:550px !important"></a></p>
+<p>f)ii) Pour les métriques créées à l'aide d'une couche catégorielle, une option de basculement supplémentaire est disponible, appelée <em>Use layer categories</em>.</p>
+<p>L'option est activée par défaut et spécifie que le graphique de widget catégoriel doit utiliser les mêmes catégories de couche que celles configurées dans la couche raster associée sur UNBL. Si les utilisateurs souhaitent utiliser des catégories de graphique de widget différentes de celles spécifiées dans la couche raster associée, ils doivent désactiver l'option <em>Use layer categories</em>. Cela invitera l'utilisateur à spécifier une liste exhaustive de catégories à utiliser dans le graphique, chaque catégorie nécessitant les paramètres suivants :</p>
+<ul>
+<li>
+<p><em>Label</em> : Le nom de la catégorie</p>
+</li>
+<li>
+<p><em>Colour</em> : Un sélecteur de couleur pour choisir la couleur à utiliser pour afficher la catégorie associée dans le graphique du widget</p>
+</li>
+<li>
+<p><em>Values</em> : Numéro(s) unique(s) dans la couche de données sous-jacente désignant la catégorie configurée. L'utilisateur peut spécifier plusieurs numéros pour la même catégorie.</p>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image12_5-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image12_5-metrics.png"></a></p>
+<p>g)  <em>X-Axis Label (optional)</em> : Pour les types de métriques avec histogramme, graphique linéaire ou graphique en aires, il est possible de spécifier un libellé pour l'axe X. Le libellé doit correspondre à la variable de données affichée. Ce champ est optionnel.</p>
+<p>h)  <em>X-Axis Unit (optional)</em> : Pour les types de métriques avec histogramme, graphique linéaire ou graphique en aires, il est possible de spécifier les unités de la variable de données. Ce champ est optionnel.</p>
+<p>i)  Une fois tous les paramètres spécifiés, le bouton « SAVE AND VIEW DETAILS » s'affichera en bleu, à condition que toutes les informations saisies soient valides. Cliquez sur ce bouton pour créer le widget.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image13-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image13-metrics.png"></a></p>
+</li>
+<li>
+<p>Dans la page de modification de widget qui apparaît, activez le bouton « Published » pour publier le widget.</p>
+</li>
+</ol>
+<h2 id="etape-5-creer-un-tableau-de-bord">Étape 5 : Créer un tableau de bord<a class="headerlink" href="#etape-5-creer-un-tableau-de-bord" title="Anchor link to this section for reference">¶</a></h2>
+<p>Un tableau de bord est l'interface utilisateur qui affiche la métrique et le widget associé dans la vue cartographique UNBL lors de la sélection d'un lieu pour consulter les métriques. Il est important de noter que les utilisateurs peuvent créer autant de métriques et de widgets qu'ils le souhaitent, mais ils peuvent tous être placés dans le même tableau de bord. Il est donc nécessaire de créer un seul tableau de bord pour toutes les métriques qu'un utilisateur souhaite configurer. Si votre espace de travail ne contient pas encore de tableau de bord, suivez ces étapes pour en créer un :</p>
+<ol>
+<li>
+<p>Cliquez sur le bouton « Home » dans la page d'administration de votre espace de travail pour développer le menu déroulant. Sélectionnez « Dashboards ».</p>
+</li>
+<li>
+<p>Cliquez sur le bouton « CREATE NEW DASHBOARD » qui apparaît.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image14-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image14-metrics.png"></a></p>
+</li>
+<li>
+<p>Dans la page de nouveau tableau de bord, renseignez les informations suivantes :</p>
+<p>a)  <em>Title</em> : Le tableau de bord doit avoir un nom qui définit clairement un groupe thématique pour les métriques personnalisées qui y sont liées. Par exemple, un tableau de bord peut contenir toutes les métriques personnalisées définies par un utilisateur particulier et s'appeler « Custom metrics by <em>user x</em> ». Ou bien un tableau de bord peut contenir des métriques destinées à être consultées pour un lieu spécifique, par exemple « Custom metrics for <em>country x</em> ».</p>
+<p>b)  <em>Dashboard slug</em> : Un slug est un identifiant unique pour le tableau de bord dans votre espace de travail. Vous ne pouvez pas avoir plusieurs tableaux de bord avec le même slug dans votre espace de travail. Il ne doit contenir que des lettres, des chiffres et des tirets (« - »). Vous pouvez utiliser le bouton « GENERATE SLUG NAME » pour générer un identifiant unique basé sur le titre de tableau de bord fourni.</p>
+<p>c)  <em>Dashboard description</em> : Vous pouvez fournir une brève description du groupe de métriques ici. Par exemple, « This dashboard contains custom metrics defined by <em>user x</em>. » Ce champ est optionnel.</p>
+<p>d)  <em>Included Widgets</em> : Choisissez le(s) widget(s) à inclure dans ce tableau de bord.</p>
+<p>e)  Une fois tous les paramètres spécifiés, le bouton « SAVE AND VIEW DETAILS » s'affichera en bleu, à condition que toutes les informations saisies soient valides. Cliquez sur ce bouton pour créer le tableau de bord.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image15-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image15-metrics.png"></a></p>
+</li>
+<li>
+<p>Dans la page de modification de tableau de bord qui apparaît, activez le bouton « Published » pour publier le tableau de bord.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si vous disposez déjà d'un tableau de bord et souhaitez y ajouter des widgets nouvellement configurés, vous pouvez modifier votre tableau de bord existant et ajouter des widgets inclus en cliquant sur l'icône de crayon du tableau de bord dans la liste des entrées de tableau de bord qui apparaissent dans la page d'administration après avoir choisi « Dashboards » dans le menu déroulant.</p>
+</div>
+<h2 id="consultation-des-tableaux-de-bord-et-des-widgets">Consultation des tableaux de bord et des widgets<a class="headerlink" href="#consultation-des-tableaux-de-bord-et-des-widgets" title="Anchor link to this section for reference">¶</a></h2>
+<p>Pour consulter vos métriques personnalisées :</p>
+<ol>
+<li>
+<p>Dans la vue cartographique UNBL, assurez-vous que votre espace de travail est activé.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image16-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image16-metrics.png" style="width:600px !important"></a></p>
+</li>
+<li>
+<p>Sélectionnez le lieu pour lequel vous souhaitez consulter des métriques personnalisées dans l'onglet « PLACES ».</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image17-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image17-metrics.png" style="width:400px !important"></a></p>
+</li>
+<li>
+<p>Si la plateforme publique UNBL et/ou d'autres espaces de travail sont actifs en même temps que votre propre espace de travail, vous devrez peut-être sélectionner le tableau de bord contenant vos métriques personnalisées. Dans ce cas, un menu déroulant apparaîtra avec une liste de tableaux de bord et les espaces de travail associés de chaque tableau de bord. Sélectionnez votre tableau de bord dans le menu déroulant.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Si les métriques personnalisées de votre tableau de bord ne chevauchent pas le lieu activé, votre tableau de bord n'apparaîtra pas dans le menu déroulant.</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image18-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image18-metrics.png" style="width:400px !important"></a></p>
+</li>
+<li>
+<p>Vous pouvez maintenant consulter les métriques personnalisées que vous avez configurées pour votre couche GeoTIFF et votre lieu choisis. Toutes les fonctionnalités des métriques dynamiques par défaut d'UNBL sont disponibles pour vos métriques personnalisées, notamment le basculement de la couche associée, la consultation d'informations et le téléchargement de données de métriques aux formats .csv, .tsv et .json.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../unbl-workspaces/images/en/image19-metrics.png" data-desc-position="bottom"><img alt="" src="../../../unbl-workspaces/images/en/image19-metrics.png"></a></p>
+</li>
+</ol>
 
 
 
