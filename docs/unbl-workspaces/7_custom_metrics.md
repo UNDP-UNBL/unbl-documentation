@@ -1,10 +1,10 @@
 # Adding Your Own Custom Metrics to Your Workspace
 
-The UNBL public platform currently offers nine dynamic metrics by default (see [‘What dynamic metrics are available for my country?’](../unbl-public-platform/8_dynamic_metrics1.md)).
+The UNBL public platform currently offers eleven dynamic metrics by default (see [‘What dynamic metrics are available for my country?’](../unbl-public-platform/8_dynamic_metrics1.md)).
 
 UNBL workspaces provide users with the ability to configure their own custom metrics to run on-the-fly calculations and display zonal statistics for users' own areas of interest, derived from their own uploaded geospatial data layers.
 
-The configuration of a custom metric in a workspace follows 5 major steps. Each major step is described in turn within this section.
+The configuration of a custom metric in a workspace follows 5 steps. Each step is described in turn within this section.
 
 ## Step 1: Upload a place
 
@@ -12,23 +12,21 @@ Metrics are displayed on UNBL through the selection of a particular place that d
 
 ## Step 2: Upload a raster layer in GeoTIFF format
 
-To create a custom metric, it is necessary to upload a geospatial data layer which you would like to view zonal statistics for. UNBL workspaces only support metric calculations using layers uploaded to the workspace through the 'GeoTIFF File Upload' option. For detailed steps on uploading a layer to your workspace using this option, see [‘How do I upload raster layers in GeoTIFF format?’](6_add_data.md/#how-do-i-upload-raster-layers-in-geotiff-format).
+To create a custom metric, it is necessary to upload a raster layer which you would like to view zonal statistics for. UNBL workspaces only support metric calculations using layers uploaded to the workspace through the 'GeoTIFF File Upload' option. For detailed steps on uploading a layer to your workspace using this option, see [‘How do I upload raster layers in GeoTIFF format?’](6_add_data.md/#how-do-i-upload-raster-layers-in-geotiff-format).
 
 For a custom metric to function properly on UNBL, it is necessary to note the following technical pre-requisites for uploaded GeoTIFF layers:
 
 - GeoTIFFs can represent any form of continuous or categorical data, but pixel values should be integer or float types;
 
-- It is recommended that for categorical data, GeoTIFFs store no more than 15 discrete integer classes; a higher number of classes impedes on the legibility of metric charts;
+- It is recommended that for categorical data, GeoTIFFs store no more than 25 discrete integer classes; a higher number of classes impedes on the legibility of metric charts;
 
 - Zonal statistics for your custom metric can only be calculated for GeoTIFF layers which have data coverage in the place you have uploaded. If you select a place in the UNBL map view whose spatial extent does not overlap at all with the spatial extent of the uploaded GeoTIFF layer which you configured the custom metric for, the metric will return an empty data chart.
 
-- It is possible to configure a time series metric which shows changes over time for several GeoTIFF layers; in these cases, all GeoTIFF layers must have the same spatial extent, resolution, attribute values, and must overlap correctly.
+- It is possible to configure a time series metric which shows changes over time for several GeoTIFF layers; in these cases, all GeoTIFF layers must have the same attribute values such as min/max value ranges for continuous data, or category definitions (i.e., the legend configuration) for categorical data.
 
 Users wishing to configure custom metrics for vector polygon data must first convert it to a raster GeoTIFF format using rasterization techniques. Examples of rasterization techniques can be found through [QGIS](https://docs.qgis.org/3.44/en/docs/user_manual/processing_algs/gdal/vectorconversion.html#rasterize-vector-to-raster), [PyGIS](https://pygis.io/docs/e_raster_rasterize.html), and [rdrr.io](https://rdrr.io/cran/terra/man/rasterize.html) online documentation. To minimize errors in metric calculations that may be introduced through the process of rasterizing vector data, consider:
 
 - If vector data only contains text attribute names, a new integer field must be added prior to rasterization and a unique number assigned to each class for categorical data; this integer field should be used to assign pixel values during rasterization
-
-- Use a consistent grid/snap extent across all vector layers when rasterizing to ensure pixel alignment for time series metrics;
 
 - Convert vector data to a consistent projected coordinate reference system such as WGS84 (EPSG: 4326) prior to rasterization;
 
@@ -52,7 +50,7 @@ Creating a metric involves choosing which GeoTIFF layers in the workspace should
 	
 	b) *Metric slug*: A slug is a unique identifier for the metric within your workspace. You cannot have multiple metrics within your workspace with the same slug. It should contain only letters, digits, and hyphens (“-”). You can use the ‘GENERATE SLUG NAME’ button to generate a unique identifier based on the supplied metric title.
 	
-	c) *Metric data source(s)*: Choose a GeoTIFF layer uploaded to your workspace from the drop-down list. For custom metrics showing change over time, you have the option to select multiple GeoTIFF layers using the 'ADD ADDITIONAL DATA SOURCE' button. Select this option only if you have a series of GeoTIFF layers with a consistent attribute schema, spatial overlap, and resolution.
+	c) *Metric data source(s)*: Choose a GeoTIFF layer uploaded to your workspace from the drop-down list. For custom metrics showing change over time, you have the option to select multiple GeoTIFF layers using the 'ADD ADDITIONAL DATA SOURCE' button. Select this option only if you have a series of GeoTIFF layers with a consistent attribute schema, such as min/max values for continuous data, or category definitions (i.e., a legend configuration) for categorical data.
 	
 	d) *Histogram bins*: This option appears as a mandatory field if you selected a GeoTIFF layer with a continuous data category. The metric will use a histogram to compute zonal statistics for continuous data layers. Therefore, it is necessary to specify the number of bins that the computed histogram for the continuous data layer will have. Bins are also known as intervals. They divide the range of numerical data stored in the GeoTIFF layer into groups of equal width. Choose a number that creates an adequate number of data intervals for the range and spread of your data. In most cases, between 5 and 20 bins is optimal, but it depends on the specific data range.
 	
@@ -86,7 +84,7 @@ Once the custom metric has been configured, it is necessary to create a widget f
 	
 	e) *Widget Layer(s)*: This field specifies the data layer that can be visualized in the UNBL map view alongside the metric. It is automatically populated with the GeoTIFF layer that is associated with your chosen metric. It is possible to choose additional layers for inclusion from the drop-down menu. However, this is not recommended, unless additional layers exist in the workspace which are not used to calculate the metric but are still useful for adding contextual geospatial information. 
 	
-	e) *Widget Chart*: This determines what chart type will be used to visualize the metric statistics for your place. The table below gives an outline of the chart types that are available based on the widget type, which is automatically detected based on whether a) the GeoTIFF layer shows categorical data (discrete classes) or continuous data (range of numerical values), and b) whether a single layer has been chosen for the metric, or multiple layers (time series metric).
+	f) *Widget Chart*: This determines what chart type will be used to visualize the metric statistics for your place. The table below gives an outline of the chart types that are available based on the widget type, which is automatically detected based on whether a) the GeoTIFF layer shows categorical data (discrete classes) or continuous data (range of numerical values), and b) whether a single layer has been chosen for the metric, or multiple layers (time series metric).
 	
 	<div style="display: flex; justify-content: center;">
 	<table style="border-collapse: collapse;">
@@ -111,14 +109,22 @@ Once the custom metric has been configured, it is necessary to create a widget f
     </tbody>
 	</table>
 	</div>
+	
+	| Widget Chart | Data display |
+	| :----------: | :----------: |
+	| Histogram | Separates the numerical range of data into intervals of equal width, called bins. The number of bins displayed corresponds to the number of bins configured in the metric page in the back-end. The x-axis displays the measured variable in the data, and the y-axis displays the measured area in km<sup>2</sup> of the area of interest.
+	| Area chart | For continuous data, also separates the numerical range into bins corresponding to the number of bins configured in the metric page in the back-end. For categorical data, distinct classes are used. The x-axis displays time, and the y-axis displays the percentage of total area of the area of interest.
+	| Pie chart | Measures the proportional coverage of each categorical class in the area of interest and displays classes in pies adding up to 100%.
+	| Bar chart | Displays each categorical class as a bar, with the x-axis displaying the measured data, and the y-axis displaying the measured area in km<sup>2</sup> of the area of interest.
+	| Line graph | Plots the variation in the mean between different continuous datasets in a time series metric. The x-axis displays time, and the y-axis displays the measured mean value of each dataset.
 
-	f)	*Widget summary (optional)*: This creates a summary of key metric statistics that will be displayed by the widget. The list of available summary fields provides parameters that can be used within the summary text. An example of a widget summary for a time series metric using three layers showing the Human Modification Index over three time periods is shown below.
+	f)i)	*Widget summary (optional)*: This creates a summary of key metric statistics that will be displayed by the widget. The list of available summary fields provides parameters that can be used within the summary text. An example of a widget summary for a time series metric using three layers showing the Human Modification Index over three time periods is shown below.
 	
 	![](images/en/image10-metrics.png)
 	
 	When this metric and its associated widget are active on UNBL, the summary fields in the text are automatically populated with the necessary parameters, as seen below.
 	
-	![](images/en/image11-metrics.png)
+	![](images/en/image11-metrics.png){style="width:550px !important" }
 
 	Alternatively, the widget summary for a single Human Modification Index layer metric would employ the following summary fields:
 
@@ -130,9 +136,19 @@ Once the custom metric has been configured, it is necessary to create a widget f
 	
 		“In {location}, {areaKm2} square kilometers had a mean HMI score of {mean} in 2022.”
 		
-	![](images/en/image12-metrics.png)
+	![](images/en/image12-metrics.png){style="width:550px !important" }
+	
+	f)ii) For metrics created using a categorical layer, an additional toggle option is available called *Use layer categories*. 
+	
+	The option is toggled on by default and specifies that the categorical widget chart should use the same layer categories as those configured in the associated raster layer on UNBL. Should users wish to use widget chart categories that are different from those specified in the associated raster layer, they should toggle the *Use layer categories* option off. This will prompt the user to specify an exhaustive list of categories that should be used in the chart, with each category requiring the following parameters to be filled in:
+	
+	- *Label*: The name of the category
+	
+	- *Colour*: A colour picker for choosing the colour that should be used to display the associated category in the widget chart
+	
+	- *Values*: Unique number(s) in the underlying data layer that denote the configured category. The user can specify more than one number to fall under the same category.
 
-	Note that this field is optional, so it does not need to be filled in.
+	![](images/en/image12_5-metrics.png)
 	
 	g)	*X-Axis Label (optional)*: For metric types with histogram, line graph, or area graph charts, it is possible to specify a label for the x-axis. The label should be of the data variable being shown. This field is optional, so it does not need to be filled in.
 	
@@ -179,18 +195,18 @@ To view your custom metrics:
 
 1. In the UNBL map view, make sure your workspace is toggled on.
 
-	![](images/en/image16-metrics.png)
+	![](images/en/image16-metrics.png){style="width:600px !important" }
 	
 2. Select the place you want to view custom metrics for from the 'PLACES' tab. 
 
-	![](images/en/image17-metrics.png)
+	![](images/en/image17-metrics.png){style="width:400px !important" }
 	
 3. If you have the UNBL public platform workspace and/or other workspaces active alongside your own workspace, you may have to select the dashboard which contains your custom metrics to view them. In this case, a drop-down menu will appear with a list of dashboards and the associated workspaces of each dashboard. Select your dashboard from the drop-down menu.
 
 	!!!note
 		If the custom metrics in your dashboard do not overlap with the activated place, your dashboard will not appear in the drop-down menu.
 
-	![](images/en/image18-metrics.png)
+	![](images/en/image18-metrics.png){style="width:400px !important" }
 	
 4. You can now view the custom metrics you set up for your chosen GeoTIFF layer and place. All functionalities of UNBL's default dynamic metrics are available for your custom metrics, including toggling the associated layer, viewing information, and downloading metric data in .csv, .tsv, and .json format.
 
