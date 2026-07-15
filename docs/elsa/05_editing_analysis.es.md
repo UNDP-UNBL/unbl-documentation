@@ -68,6 +68,8 @@ Puede establecer cualquier valor superior o igual a 0,001 para los objetivos de 
 
 También debe tener en cuenta que, si desea bloquear las áreas protegidas existentes (el valor predeterminado), la restricción del área de protección total debe ser igual o superior a la superficie cubierta por las áreas protegidas existentes. Por ejemplo, la superficie cubierta por las áreas protegidas existentes en Kazajistán es del 17,08 %. Por lo tanto, la restricción del área de protección debe ser igual o superior al 17,08 %.  
 
+Las acciones a las que se hace referencia aquí son el equivalente funcional de las acciones de la jerarquía de respuesta LDN respaldada por la UNCCD. ‘Proteger’ es el equivalente de ‘evitar’ la degradación de la tierra, ‘manejar’ es el equivalente de ‘reducir’ la degradación de la tierra, y ‘restaurar’ es el equivalente de ‘revertir’ la degradación de la tierra. En resumen, esto equipara “Proteger-Gestionar-Restaurar” con “Evitar-Reducir-Revertir”, garantizando la alineación entre los marcos globales de biodiversidad. Para obtener más información sobre cada objetivo del KMGBF, consulte el [sitio web del CDB](https://www.cbd.int/gbf/targets). Para obtener más información sobre la jerarquía de respuestas LDN, consulte el [sitio web de la CNULD](https://www.unccd.int/land-and-life/land-degradation-neutrality/overview).
+
 <figure markdown>
 ![](images/SP 8.png){#fig-setting-objectives}
 <figcaption>Figura 8. Establecer objetivos</figcaption>
